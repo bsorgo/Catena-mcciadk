@@ -36,7 +36,7 @@ McciAdkLib_BufferToUlong(
 	bool *pfOverflow
 	);
 
-static inline size_t
+/*static inline size_t
 McciAdkLib_BufferToUint32(
 	const char *s,
 	size_t n,
@@ -46,8 +46,8 @@ McciAdkLib_BufferToUint32(
 	)
 	{
 	// this will throw a compile error if uint32_t != ulong
-	return McciAdkLib_BufferToUlong(s, n, base, pulnum, pfOverflow);
-	}
+	return McciAdkLib_BufferToUlong(s, n, base, (unsigned long *)pulnum, pfOverflow);
+	}*/
 
 // check whether c is a decimal digit
 static inline bool
